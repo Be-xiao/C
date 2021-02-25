@@ -20,6 +20,7 @@ int main()
 }
 */
 
+/*
 int main()
 {
     int arr1[] = {1, 2, 3, 4, 5};
@@ -35,4 +36,39 @@ int main()
     }
 
     return 0;
+}
+*/
+
+/*
+void loveyou(int n) // n为问题规模
+{
+    int i = 1; //
+    while (i <= n)
+    {
+        printf("I love you %d\n", i);
+        i++;
+    }
+    printf("I love you more than %d\n", n);
+}
+
+int main()
+{
+    loveyou(10);
+    return 0;
+}
+//*算法的时间复杂度 T = O(n);
+*/
+
+void test(int x)
+{
+    x = 1024;
+    printf("test函数内部 x = %d\n", x);
+}
+
+int main()
+{
+    int x = 1;
+    printf("调用test前 x = %d\n", x);
+    test(x);
+    printf("调用test后， X =%d\n", x);
 }
