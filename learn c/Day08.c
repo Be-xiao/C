@@ -70,5 +70,5 @@ int main()
     int x = 1;
     printf("调用test前 x = %d\n", x);
     test(x);
-    printf("调用test后， X =%d\n", x);
+    printf("调用test后 X =%d\n", x);
 }
