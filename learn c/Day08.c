@@ -77,6 +77,6 @@ int main()
 
 int main()
 {
-    printf("Hello worl\n");
+    printf("Hello world\n");
     return 0;
 }
