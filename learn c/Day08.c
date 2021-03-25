@@ -59,6 +59,7 @@ int main()
 //*算法的时间复杂度 T = O(n);
 */
 
+/*
 void test(int x)
 {
     x = 1024;
@@ -72,3 +73,11 @@ int main()
     test(x);
     printf("调用test后 X =%d\n", x);
 }
+*/
+
+int main()
+{
+    printf("Hello world\n");
+    return 0;
+}
+,
