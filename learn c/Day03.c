@@ -22,7 +22,6 @@ int main()
 #define MAX 10
 // #define�����-������
 #define min(X,Y) (X<Y?X:Y)
-
 int max(int x, int y)
 {
 	if (x > y)
@@ -30,7 +29,6 @@ int max(int x, int y)
 	else
 		return y;
 }
-
 int main()
 {
 	int a = MAX;
@@ -57,7 +55,6 @@ void test()
 	a++;
 	printf("a = %d\n", a);
 }
-
 int main()
 {
 	int i = 0;
@@ -94,7 +91,6 @@ int Add(int x, int y)
 	int z = x + y;
 	return z;
 }
-
 int main()
 {
 	int arr[10] = { 0 }; // [] - �±����ò�����
@@ -138,7 +134,6 @@ int main()
 */
 
 /*
-
 /*
 int main()
 {
@@ -176,7 +171,6 @@ int main()
 	printf("%d\n", b);  // ʹ�õģ���ӡ�����������Դ��
 	return 0;
 }
-
 */
 
 /*
@@ -190,7 +184,6 @@ int main()
 	printf("%d\n", sizeof (a));  // 4
 	printf("%d\n", sizeof (arr));  // ���������С����λ���ֽ�
 	printf("%d\n", sizeof (arr) / sizeof(arr[0]));  // 6
-
 	return 0;
 }
 */
@@ -203,7 +196,6 @@ Max(int x, int y)
 	else
 		return y;
 }
-
 int main()
 {
 	int num1 = 10;
@@ -211,7 +203,6 @@ int main()
 	int max = 0;
 	max = Max(num1, num2);
 	printf("max = %d\n", max);
-
 	return 0;
 }
 */
