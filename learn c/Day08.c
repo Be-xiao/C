@@ -72,7 +72,7 @@ int main()
     指针指向的空间释放;
         int test()
         {
-            int a = 10;
+            int a = 10; //a局部变量
             return &a;
         }
 
@@ -88,7 +88,7 @@ int main()
     指针指向空间释放即使置NULL
     指针使用之前检查有效性
 */
-
+/*
 //*指针的解引用
 int main()
 {
@@ -99,6 +99,31 @@ int main()
     *pi = 0; //重点在调试的过程中观察内存的变化
     return 0;
 }
+*/
+/*
+int main()
+{
+    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int sz = sizeof(arr) / sizeof(arr[0]);
+    printf("%d\n", sz);
+
+    int *p = arr;
+    for (int i = 0; i < sz; i++)
+    {
+        printf("%d\n", *p);
+        p++;
+    }
+
+    return 0;
+}
+*/
+//*指针+-整数
+#define N_VALUES 5
+float values[N_VALUES];
+float *vp;
+//!指针+-整数；指针的关系运算
+for (vp = &values[0]; vp < &values[N_VALUES])
+    *vp++ = 0;
 
 /*
 int main()
