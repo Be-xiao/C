@@ -89,6 +89,17 @@ int main()
     指针使用之前检查有效性
 */
 
+//*指针的解引用
+int main()
+{
+    int n = 0x11223344;
+    char *pc = (char *)&n;
+    int *pi = &n;
+    *pc = 0;
+    *pi = 0; //重点在调试的过程中观察内存的变化
+    return 0;
+}
+
 /*
 int main()
 {
