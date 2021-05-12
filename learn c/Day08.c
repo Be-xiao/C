@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <malloc.h>
 
 //*指针是什么
 /*
@@ -115,15 +116,47 @@ int main()
     }
 
     return 0;
-}
-*/
+}*/
+
+/*
 //*指针+-整数
 #define N_VALUES 5
 float values[N_VALUES];
 float *vp;
 //!指针+-整数；指针的关系运算
-for (vp = &values[0]; vp < &values[N_VALUES])
+for (vp = &values[0]; vp < &values[N_VALUES];){
     *vp++ = 0;
+}*/
+//?指针模拟strlen功能
+/*
+int main()
+{
+    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int sf = &arr[9] - &arr[0]; 
+    printf("%d\n", sf); 
+    return 0;
+}*/
+/*
+int my_strlen(char *str)
+{
+    char *start = str;
+    char *end = str;
+    while (*end != '\0')
+    {
+        end++;
+    }
+    return end - start;
+}
+
+int main()
+{ //*strlen - 求字符串长度
+    char arr[] = "bit";
+
+    int len = my_strlen(arr);
+    printf("%d\n", len);
+
+    return 0;
+}*/
 
 /*
 int main()
