@@ -118,15 +118,24 @@ int main()
     return 0;
 }*/
 
-/*
 //*指针+-整数
 #define N_VALUES 5
 float values[N_VALUES];
 float *vp;
 //!指针+-整数；指针的关系运算
-for (vp = &values[0]; vp < &values[N_VALUES];){
-    *vp++ = 0;
-}*/
+for (vp = &values[N_VALUES - 1]; vp >= &values[0]; VP--)
+{
+    *vp = 0;
+}
+
+for (vp = &values[N_VALUES]; vp > &values[0];)
+{
+    *--vp = 0;
+}
+//*实际在绝大部分的编译器上是可以顺利完成任务的，然而我们还是要避免这样写，因为标准并不保证它可行
+/*标准规定：
+
+*/
 //?指针模拟strlen功能
 /*
 int main()
