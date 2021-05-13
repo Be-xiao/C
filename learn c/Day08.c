@@ -117,7 +117,7 @@ int main()
 
     return 0;
 }*/
-
+/*
 //*指针+-整数
 #define N_VALUES 5
 float values[N_VALUES];
@@ -131,11 +131,13 @@ for (vp = &values[N_VALUES - 1]; vp >= &values[0]; VP--)
 for (vp = &values[N_VALUES]; vp > &values[0];)
 {
     *--vp = 0;
-}
+}*/
 //*实际在绝大部分的编译器上是可以顺利完成任务的，然而我们还是要避免这样写，因为标准并不保证它可行
 /*标准规定：
-
+允许指向数组元素的指针与指向数组的最后一个元素后面的那个内存位置的指针比较，但是不允许
+与指向第一个元素之前的那个内存位置的指针进行比较。
 */
+
 //?指针模拟strlen功能
 /*
 int main()
@@ -167,6 +169,21 @@ int main()
     return 0;
 }*/
 
+//*指针和数组
+int main()
+{
+    int arr[10] = {0};
+    printf("%p\n", arr); //地址首元素地址
+    printf("%p\n", arr);
+    printf("%p\n", &arr[0]);
+    printf("%p\n", &arr[0] + 1);
+    printf("%p\n", &arr);
+    printf("%p\n", &arr + 1);
+    //* &arr - &数组名 - 数组名不是首元素地址-数组名表示整个数组 - &数组名 取出的是整个数组的地址
+    //* sizeof(arr) - sizeof(数组名) - 数组名表示的整个数组 - sizeof(数组名)计算的是整个数组的大小
+    return 0;
+}
+//*结论:数组名表示的是数组首元素地址
 /*
 int main()
 {
