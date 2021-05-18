@@ -195,7 +195,8 @@ int main()
 }*/
 
 //*指针数组 - 数组 - 存放指针的数组
-//*数组指针 - 指针 -
+//*数组指针 - 指针
+/*
 int main()
 {
     int a = 10;
@@ -208,7 +209,6 @@ int main()
     }
 }
 
-/*
 int main()
 {
     int arr1[] = {1, 2, 3, 4, 5};
@@ -227,7 +227,6 @@ int main()
 }
 */
 
-/*
 void test(int x)
 {
     x = 1024;
@@ -241,4 +240,3 @@ int main()
     test(x);
     printf("调用test后 X =%d\n", x);
 }
-*/
