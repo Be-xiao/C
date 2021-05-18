@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <malloc.h>
 
 //*指针是什么
 /*
@@ -33,18 +32,6 @@ int main()
 
     printf("%p\n", pa);
     printf("%p\n", pa + 1);
-
-    return 0;
-}*/
-
-/*
-//*指针数组
-int main()
-{
-    int arr[10] = {0};
-    int *p = arr; //数组名-首元素的地址
-    for (int i = 0; i < 10; i++)
-        *(p + i) = 1;
 
     return 0;
 }*/
@@ -89,6 +76,7 @@ int main()
     指针指向空间释放即使置NULL
     指针使用之前检查有效性
 */
+
 /*
 //*指针的解引用
 int main()
@@ -100,8 +88,7 @@ int main()
     *pi = 0; //重点在调试的过程中观察内存的变化
     return 0;
 }
-*/
-/*
+
 int main()
 {
     int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -117,6 +104,7 @@ int main()
 
     return 0;
 }*/
+
 /*
 //*指针+-整数
 #define N_VALUES 5
@@ -132,6 +120,7 @@ for (vp = &values[N_VALUES]; vp > &values[0];)
 {
     *--vp = 0;
 }*/
+
 //*实际在绝大部分的编译器上是可以顺利完成任务的，然而我们还是要避免这样写，因为标准并不保证它可行
 /*标准规定：
 允许指向数组元素的指针与指向数组的最后一个元素后面的那个内存位置的指针比较，但是不允许
@@ -170,6 +159,7 @@ int main()
 }*/
 
 //*指针和数组
+/*
 int main()
 {
     int arr[10] = {0};
@@ -182,8 +172,42 @@ int main()
     //* &arr - &数组名 - 数组名不是首元素地址-数组名表示整个数组 - &数组名 取出的是整个数组的地址
     //* sizeof(arr) - sizeof(数组名) - 数组名表示的整个数组 - sizeof(数组名)计算的是整个数组的大小
     return 0;
-}
+}*/
 //*结论:数组名表示的是数组首元素地址
+/*
+int main()
+{
+    int arr[10] = {0};
+    int *p = arr; //存放首元素的地址
+    int i = 0;
+    for (i = 0; i < 10; i++)
+    {
+        *(p + i) = i;
+        printf("%d ", *(p + i));
+    }
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("\n%p ====== %p\n", (p + i), &arr[i]);
+    }
+
+    return 0;
+}*/
+
+//*指针数组 - 数组 - 存放指针的数组
+//*数组指针 - 指针 -
+int main()
+{
+    int a = 10;
+    int b = 20;
+    int c = 30;
+    int *arr[3] = {&a, &b, &c}; //指针数组
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%d \n", *arr[i]);
+    }
+}
+
 /*
 int main()
 {
@@ -201,26 +225,6 @@ int main()
 
     return 0;
 }
-*/
-
-/*
-void loveyou(int n) // n为问题规模
-{
-    int i = 1; //
-    while (i <= n)
-    {
-        printf("I love you %d\n", i);
-        i++;
-    }
-    printf("I love you more than %d\n", n);
-}
-
-int main()
-{
-    loveyou(10);
-    return 0;
-}
-//*算法的时间复杂度 T = O(n);
 */
 
 /*
